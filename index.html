@@ -3,105 +3,111 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Наши Магазины</title>
+    <title>Территория Вкуса</title>
     <style>
         :root {
-            --primary-bg: #f8f9fa;
-            --card-bg: #ffffff;
-            --accent-green: #2ecc71;
-            --accent-blue: #3498db;
-            --text-main: #2c3e50;
+            --bg: #f0f2f5;
+            --card-bg: rgba(255, 255, 255, 0.9);
+            --text: #1c1e21;
+            --green: #27ae60;
+            --blue: #2980b9;
         }
         body { 
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; 
-            background: var(--primary-bg); 
-            display: flex; 
-            justify-content: center; 
-            padding: 20px; 
-            margin: 0;
+            font-family: -apple-system, system-ui, sans-serif; 
+            background: var(--bg); 
+            display: flex; justify-content: center; 
+            margin: 0; padding: 20px; color: var(--text);
         }
-        .container { max-width: 450px; width: 100%; }
-        h1 { text-align: center; color: var(--text-main); font-size: 24px; margin-bottom: 30px; }
+        .container { max-width: 380px; width: 100%; text-align: center; }
+        
+        h1 { font-size: 22px; margin-bottom: 25px; font-weight: 800; letter-spacing: -0.5px; }
         
         .shop-card { 
             background: var(--card-bg); 
-            padding: 20px; 
-            border-radius: 16px; 
-            box-shadow: 0 10px 20px rgba(0,0,0,0.05); 
-            margin-bottom: 20px; 
+            border-radius: 20px; 
+            padding: 16px; 
+            margin-bottom: 16px; 
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border: 1px solid rgba(255,255,255,0.3);
         }
-        .shop-name { 
-            font-size: 18px; 
-            font-weight: bold; 
-            margin-bottom: 15px; 
-            color: var(--text-main);
-            border-bottom: 2px solid #eee;
-            padding-bottom: 10px;
-        }
+        .shop-name { font-size: 16px; font-weight: 700; margin-bottom: 12px; opacity: 0.9; }
+        
+        .btn-group { display: flex; gap: 10px; }
         
         .btn { 
-            display: flex; 
-            align-items: center; 
-            justify-content: center; 
-            padding: 14px; 
-            margin: 10px 0; 
-            border-radius: 10px; 
-            text-decoration: none; 
-            font-weight: 600; 
-            transition: transform 0.2s; 
+            flex: 1;
+            display: flex; align-items: center; justify-content: center; 
+            padding: 10px; border-radius: 12px; 
+            text-decoration: none; font-size: 14px; font-weight: 600; 
+            transition: all 0.2s ease;
         }
-        .btn:active { transform: scale(0.98); }
+        .btn:active { transform: scale(0.95); }
         
-        .btn-call { background: var(--accent-green); color: white; }
-        .btn-map { background: var(--accent-blue); color: white; }
+        .btn-call { background: #e8f5e9; color: var(--green); border: 1px solid rgba(39, 174, 96, 0.2); }
+        .btn-map { background: #e3f2fd; color: var(--blue); border: 1px solid rgba(41, 128, 185, 0.2); }
         
-        .social-block { margin-top: 40px; text-align: center; }
-        .btn-insta { background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); color: white; }
-        .btn-tg { background: #0088cc; color: white; }
+        .social-row { display: flex; justify-content: center; gap: 20px; margin-top: 30px; }
+        .social-link { 
+            width: 50px; height: 50px; border-radius: 50%; 
+            display: flex; align-items: center; justify-content: center;
+            text-decoration: none; font-size: 20px; color: white;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        .tg { background: #0088cc; }
+        .inst { background: linear-gradient(45deg, #f09433, #dc2743, #bc1888); }
         
-        .emoji { margin-right: 10px; font-size: 20px; }
+        .emoji { margin-right: 6px; font-size: 16px; }
     </style>
 </head>
 <body>
 
 <div class="container">
-    <h1>Наши локации</h1>
+    <h1>Территория Вкуса</h1>
 
     <div class="shop-card">
-        <div class="shop-name">1. Юнусабадский рынок</div>
-        <a href="tel:+998901749924" class="btn btn-call"><span class="emoji">📞</span> Позвонить</a>
-        <a href="https://yandex.uz/maps/-/CPaXaDox" target="_blank" class="btn btn-map"><span class="emoji">📍</span> На карте</a>
+        <div class="shop-name">Юнусабадский рынок</div>
+        <div class="btn-group">
+            <a href="tel:+998901749924" class="btn btn-call"><span class="emoji">📞</span> Связь</a>
+            <a href="https://yandex.uz/maps/-/CPaXaDox" target="_blank" class="btn btn-map"><span class="emoji">📍</span> Карта</a>
+        </div>
     </div>
 
     <div class="shop-card">
-        <div class="shop-name">2. Буз базар</div>
-        <a href="tel:+998900221052" class="btn btn-call"><span class="emoji">📞</span> Позвонить</a>
-        <a href="https://yandex.uz/maps/-/CPaXeE4I" target="_blank" class="btn btn-map"><span class="emoji">📍</span> На карте</a>
+        <div class="shop-name">Буз базар</div>
+        <div class="btn-group">
+            <a href="tel:+998900221052" class="btn btn-call"><span class="emoji">📞</span> Связь</a>
+            <a href="https://yandex.uz/maps/-/CPaXeE4I" target="_blank" class="btn btn-map"><span class="emoji">📍</span> Карта</a>
+        </div>
     </div>
 
     <div class="shop-card">
-        <div class="shop-name">3. Катартал</div>
-        <a href="tel:+998911354928" class="btn btn-call"><span class="emoji">📞</span> Позвонить</a>
-        <a href="https://yandex.uz/maps/-/CPaXeQJa" target="_blank" class="btn btn-map"><span class="emoji">📍</span> На карте</a>
+        <div class="shop-name">Катартал</div>
+        <div class="btn-group">
+            <a href="tel:+998911354928" class="btn btn-call"><span class="emoji">📞</span> Связь</a>
+            <a href="https://yandex.uz/maps/-/CPaXeQJa" target="_blank" class="btn btn-map"><span class="emoji">📍</span> Карта</a>
+        </div>
     </div>
 
     <div class="shop-card">
-        <div class="shop-name">4. Аския</div>
-        <a href="tel:+998978662803" class="btn btn-call"><span class="emoji">📞</span> Позвонить</a>
-        <a href="https://yandex.uz/maps/-/CPaXaDjr" target="_blank" class="btn btn-map"><span class="emoji">📍</span> На карте</a>
+        <div class="shop-name">Аския</div>
+        <div class="btn-group">
+            <a href="tel:+998978662803" class="btn btn-call"><span class="emoji">📞</span> Связь</a>
+            <a href="https://yandex.uz/maps/-/CPaXaDjr" target="_blank" class="btn btn-map"><span class="emoji">📍</span> Карта</a>
+        </div>
     </div>
 
     <div class="shop-card">
-        <div class="shop-name">5. Гагарин</div>
-        <a href="tel:+998977581849" class="btn btn-call"><span class="emoji">📞</span> Позвонить</a>
-        <a href="https://yandex.uz/maps/-/CPaXeFmK" target="_blank" class="btn btn-map"><span class="emoji">📍</span> На карте</a>
+        <div class="shop-name">Гагарин</div>
+        <div class="btn-group">
+            <a href="tel:+998977581849" class="btn btn-call"><span class="emoji">📞</span> Связь</a>
+            <a href="https://yandex.uz/maps/-/CPaXeFmK" target="_blank" class="btn btn-map"><span class="emoji">📍</span> Карта</a>
+        </div>
     </div>
 
-    <div class="social-block">
-    <p style="color: #888;">Свяжитесь с нами в соцсетях:</p>
-    <a href="https://t.me/tasin_sharaev" class="btn btn-tg" target="_blank">Telegram</a>
-    <a href="https://www.instagram.com/territoriavkusa.uz/" class="btn btn-insta" target="_blank">Instagram</a>
-</div>
+    <div class="social-row">
+        <a href="https://t.me/tasin_sharaev" class="social-link tg" target="_blank">TG</a>
+        <a href="https://www.instagram.com/territoriavkusa.uz/" class="social-link inst" target="_blank">IG</a>
+    </div>
 </div>
 
 </body>
