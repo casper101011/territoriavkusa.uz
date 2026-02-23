@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Наши Магазины</title>
+    <style>
+        :root {
+            --primary-bg: #f8f9fa;
+            --card-bg: #ffffff;
+            --accent-green: #2ecc71;
+            --accent-blue: #3498db;
+            --text-main: #2c3e50;
+        }
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; 
+            background: var(--primary-bg); 
+            display: flex; 
+            justify-content: center; 
+            padding: 20px; 
+            margin: 0;
+        }
+        .container { max-width: 450px; width: 100%; }
+        h1 { text-align: center; color: var(--text-main); font-size: 24px; margin-bottom: 30px; }
+        
+        .shop-card { 
+            background: var(--card-bg); 
+            padding: 20px; 
+            border-radius: 16px; 
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05); 
+            margin-bottom: 20px; 
+        }
+        .shop-name { 
+            font-size: 18px; 
+            font-weight: bold; 
+            margin-bottom: 15px; 
+            color: var(--text-main);
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+        }
+        
+        .btn { 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            padding: 14px; 
+            margin: 10px 0; 
+            border-radius: 10px; 
+            text-decoration: none; 
+            font-weight: 600; 
+            transition: transform 0.2s; 
+        }
+        .btn:active { transform: scale(0.98); }
+        
+        .btn-call { background: var(--accent-green); color: white; }
+        .btn-map { background: var(--accent-blue); color: white; }
+        
+        .social-block { margin-top: 40px; text-align: center; }
+        .btn-insta { background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); color: white; }
+        .btn-tg { background: #0088cc; color: white; }
+        
+        .emoji { margin-right: 10px; font-size: 20px; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Наши локации</h1>
+
+    <div class="shop-card">
+        <div class="shop-name">1. Юнусабадский рынок</div>
+        <a href="tel:+998901749924" class="btn btn-call"><span class="emoji">📞</span> Позвонить</a>
+        <a href="https://yandex.uz/maps/-/CPaXaDox" target="_blank" class="btn btn-map"><span class="emoji">📍</span> На карте</a>
+    </div>
+
+    <div class="shop-card">
+        <div class="shop-name">2. Буз базар</div>
+        <a href="tel:+998900221052" class="btn btn-call"><span class="emoji">📞</span> Позвонить</a>
+        <a href="https://yandex.uz/maps/-/CPaXeE4I" target="_blank" class="btn btn-map"><span class="emoji">📍</span> На карте</a>
+    </div>
+
+    <div class="shop-card">
+        <div class="shop-name">3. Катартал</div>
+        <a href="tel:+998911354928" class="btn btn-call"><span class="emoji">📞</span> Позвонить</a>
+        <a href="https://yandex.uz/maps/-/CPaXeQJa" target="_blank" class="btn btn-map"><span class="emoji">📍</span> На карте</a>
+    </div>
+
+    <div class="shop-card">
+        <div class="shop-name">4. Аския</div>
+        <a href="tel:+998978662803" class="btn btn-call"><span class="emoji">📞</span> Позвонить</a>
+        <a href="https://yandex.uz/maps/-/CPaXaDjr" target="_blank" class="btn btn-map"><span class="emoji">📍</span> На карте</a>
+    </div>
+
+    <div class="shop-card">
+        <div class="shop-name">5. Гагарин</div>
+        <a href="tel:+998977581849" class="btn btn-call"><span class="emoji">📞</span> Позвонить</a>
+        <a href="https://yandex.uz/maps/-/CPaXeFmK" target="_blank" class="btn btn-map"><span class="emoji">📍</span> На карте</a>
+    </div>
+
+    <div class="social-block">
+    <p style="color: #888;">Свяжитесь с нами в соцсетях:</p>
+    <a href="https://t.me/tasin_sharaev" class="btn btn-tg" target="_blank">Telegram</a>
+    <a href="https://www.instagram.com/territoriavkusa.uz/" class="btn btn-insta" target="_blank">Instagram</a>
+</div>
+</div>
+
+</body>
+</html>
